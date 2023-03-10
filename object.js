@@ -26,3 +26,6 @@ console.log(typeof xyz); //number
 xyz = 'me';
 console.log(xyz); //me
 console.log(typeof xyz); //string
+
+const date = new Date()
+console.log(typeof date) // object
