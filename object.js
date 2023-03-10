@@ -21,7 +21,8 @@ console.log(user.readingList.length); //3
 
 
 //change data type
-let xyz = 123 ;
+let xyz = 123 ; 
+console.log(typeof xyz); //number
 xyz = 'me';
 console.log(xyz); //me
 console.log(typeof xyz); //string
