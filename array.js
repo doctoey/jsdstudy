@@ -11,4 +11,3 @@ console.log(fruit[3]) //grape
 fruit [0] = 'berry';
 console.log(fruit) //[ 'berry', 'orange', 'banana', 'grape' ] แทนที่ apple ไปแล้ว
 console.log(fruit.length) // 4
-
