@@ -10,3 +10,8 @@ let fullName = firstName + ' ' + lastName;
 console.log(fullName);
 console.log(fullName.length);
 console.log(fullName.toUpperCase());
+
+//boolean 
+
+let findLetter = email.includes('@')
+console.log(findLetter);  // true ใน email มี @ เลยได้ true
