@@ -32,5 +32,29 @@ console.log(10%5); //0  หารเอาเศษ เศษ 0
 console.log(10**2); //100 ยกกำลัง
 
 //order operator
-let nnnnnn = 10*2 + 5**2 -7
-console.log(nnnnnn);
+let nnnnnn = 10*2 + 5**2 -7 
+console.log(nnnnnn);    //38
+
+//undefined 
+let ageeeee;
+console.log(ageeeee); //undefined
+
+//Null ค่าว่าง
+let aaaaa = null;    //ค่าเริ่มต้นเป็น false
+
+if (!aaaaa) {    //ใส่ !หน้า ให้มันเป็น true
+    console.log("a ia null");
+} else {
+    console.log("a ia not null");
+}
+
+// NaN
+
+let ccd = 10+"ก"
+console.log(ccd);
+let ddc = 10-"ก"
+console.log(ddc);
+let eed = 10*"ก"
+console.log(eed);
+let ffd = 10/"ก"
+console.log(ffd);
