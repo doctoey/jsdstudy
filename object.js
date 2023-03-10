@@ -6,15 +6,15 @@ let user = {
     readingList:['HTML', 'CSS', 'JavaScript']
 }
 console.log(user);
-console.log(user.age);
-console.log(user.หิว);
-console.log(user.readingList);
+console.log(user.age); //17
+console.log(user.หิว); //กินไรดี
+console.log(user.readingList); //[ 'HTML', 'CSS', 'JavaScript' ]
 
 //จะเปลี่ยนอายุทำไง
 user.age = 18
-console.log(user.age);
+console.log(user.age); //18
 
 user.readingList[0] = 'Figma'
-console.log(user.readingList[0]);
+console.log(user.readingList[0]); //Figma
 console.log(user.readingList[1]);
-console.log(user.readingList.length);
+console.log(user.readingList.length); //3
