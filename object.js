@@ -18,3 +18,10 @@ user.readingList[0] = 'Figma'
 console.log(user.readingList[0]); //Figma
 console.log(user.readingList[1]);
 console.log(user.readingList.length); //3
+
+
+//change data type
+let xyz = 123 ;
+xyz = 'me';
+console.log(xyz); //me
+console.log(typeof xyz); //string
