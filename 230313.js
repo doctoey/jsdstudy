@@ -88,3 +88,13 @@ info('wowow2owow')  //อันนี้ต้องเขียนก่อน�
 //arrow functions
 let infoaarr = name => console.log(name);
 infoaarr('arrrorowoow')
+
+let addNum = (a, b) => a + b;
+addNum(1, 5);
+console.log(addNum(1,5)) //6
+
+
+let koon = (a, b) => a * b;
+let x = koon(3, 5);
+let y = x;
+console.log(x) //15
