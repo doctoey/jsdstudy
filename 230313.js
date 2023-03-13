@@ -71,3 +71,16 @@ console.log('password is ok');
 } else {
 console.log('password is tooshortttt');
 }
+
+
+//ex.3
+info('wowowowow')
+function info(name) {
+  console.log(name);
+}
+
+
+const myinfo = function(name) {
+  console.log(name);
+}
+info('wowow2owow')  //อันนี้ต้องเขียนก่อนค่อยเรียกใช้ ไม่เหมือนข้างบน เรียกใช้ก่อนก็ได้
