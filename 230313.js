@@ -84,3 +84,7 @@ const myinfo = function(name) {
   console.log(name);
 }
 info('wowow2owow')  //อันนี้ต้องเขียนก่อนค่อยเรียกใช้ ไม่เหมือนข้างบน เรียกใช้ก่อนก็ได้
+
+//arrow functions
+let infoaarr = name => console.log(name);
+infoaarr('arrrorowoow')
