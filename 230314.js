@@ -13,7 +13,7 @@ function calWithReturn (num1,num2){
   function cal(a){
       console.log (a+1); 
   }
-  cal(total);//15   //มาไงวะะะ หาคนถามเอา
+  cal(total);//15   //มาไงวะะะ หาคนถามเอา // //อ๋อ total มัน 14 +1 เลย 15
 
 
 
