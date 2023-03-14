@@ -14,3 +14,18 @@ function calWithReturn (num1,num2){
       console.log (a+1); 
   }
   cal(total);//15
+
+
+
+  ///block scope
+
+  {
+    let first = 'html';
+  let seco = 'css'        
+  console.log(first)        //'html'
+  } 
+  
+  {
+    let first = 'harry'
+    console.log(first)     //'harry'
+  }
