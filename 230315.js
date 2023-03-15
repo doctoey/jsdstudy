@@ -65,3 +65,55 @@ console.log(ja) // [1,2,3]
 
 ja.reverse()
 console.log(ja) //[3,2,1]
+
+///////////////////////////
+
+//for loop
+
+for (let i = 0; i < 5 ; i++) {
+    console.log('Hello ' +i) 
+    // 'Hello 0'
+    // 'Hello 1'
+    // 'Hello 2'
+    // 'Hello 3'
+    // 'Hello 4'
+}
+
+for (let i = 0; i < 5 ; i++) {
+    if (i %2 !== 0){
+        console.log('i am odd ' + i)    
+    // 'i am odd 1'
+    // 'i am odd 3'
+    }
+}
+
+//nested for loop
+//loop ซ้อน loop
+for (let i = 0; i < 5 ; i++) {
+    console.log(i);
+      for (let j = 0; j < 3 ; j++){
+      console.log('Hello ' +j)
+      }
+}
+
+// 0
+// Hello 0
+// Hello 1
+// Hello 2
+// 1
+// Hello 0
+// Hello 1
+// Hello 2
+// 2
+// Hello 0
+// Hello 1
+// Hello 2
+// 3
+// Hello 0
+// Hello 1
+// Hello 2
+// 4
+// Hello 0
+// Hello 1
+// Hello 2
+
