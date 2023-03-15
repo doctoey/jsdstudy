@@ -53,3 +53,15 @@ console.log(combine2) //[ 4, 5, 6, 1, 2, 3 ]
 
 const combine3 = [...ff,...ss]  //es6 เป็นต้นไป
 console.log(combine3) //[ 1, 2, 3, 4, 5, 6 ]
+
+const slice = combine3.slice(2,4) // slice(start,end+1)
+console.log(slice) // [3,4]
+
+/////////////////////////
+
+const ja = [2,3,1]
+ja.sort()
+console.log(ja) // [1,2,3]
+
+ja.reverse()
+console.log(ja) //[3,2,1]
