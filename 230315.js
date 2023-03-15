@@ -9,5 +9,6 @@ console.log(number)   //[ 1, 2, 3, 4, 5, 6 ]
 number.splice(2,0,'a')
 console.log(number)      //[ 1, 2, 'a', 3, 4, 5, 6 ]
 
-number.pop() //เอาตัวสุดท้ายออก
+const last = number.pop() //เอาตัวสุดท้ายออก
 console.log(number) //[ 1, 2, 'a', 3, 4, 5 ]
+console.log(last); // 6
