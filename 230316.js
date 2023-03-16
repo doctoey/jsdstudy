@@ -80,4 +80,10 @@ const lessNumber = myNumber.findIndex(num => {
 console.log(lessNumber);  //2 ตัว
 
 
+//.reduce()
+//อารมณ์เดียวกับ sum
 
+const numberR = [1,2,3,4,5]
+
+const sumR = numberR.reduce((accumulator,currentValue) => accumulator + currentValue)
+console.log(sumR);  //15
