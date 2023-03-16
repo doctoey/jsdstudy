@@ -84,6 +84,10 @@ console.log(lessNumber);  //2 ตัว
 //อารมณ์เดียวกับ sum
 
 const numberR = [1,2,3,4,5]
+//a=1 , c=2 => 3
+//a=3 , c=3 => 6
+//a=6 , c=4 => 10
+//a=10 , c=5 => 15
 
 const sumR = numberR.reduce((accumulator,currentValue) => accumulator + currentValue)
 console.log(sumR);  //15
