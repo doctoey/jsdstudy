@@ -46,5 +46,6 @@ let toEuros = (value) => {
     value *= 0.85;
     return value
 }
+//let storeEUR = storeUSD.map(toEuros); เขียนแบบนี้ก็ได้ ดูง่ายกว่า value => value * 0.85
 toEuros(5)  
 console.log(toEuros(5)); //4.25
