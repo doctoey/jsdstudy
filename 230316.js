@@ -58,3 +58,7 @@ const numberf = [1,-1,2,3];
 //filter only positive number
 const filtered = numberf.filter(n => n >= 0);  //ในวงเล็บคือ arrow function
 console.log(filtered) //[ 1, 2, 3 ] 
+
+const fruit = ['apple','banana','orange','pineapple']
+const filfruit = fruit.filter(element => element !== 'banana')
+console.log(filfruit); //[ 'apple', 'orange', 'pineapple' ]
