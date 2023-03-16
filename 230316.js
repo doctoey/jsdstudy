@@ -1,3 +1,4 @@
+//forEach()
 const number = [1,2,3,4,5];
 
 number.forEach((item,index) => {
@@ -29,3 +30,14 @@ console.log(count); //{ a: 3, b: 1, c: 2, d: 1 } //นับจำนวนต�
 // { a: 2, b: 1, c: 1, d: 1 }
 // { a: 2, b: 1, c: 2, d: 1 }
 // { a: 3, b: 1, c: 2, d: 1 }
+
+
+//.map() เหมือน forEach() แต่มีการ return ค่า มีการ mod array แแต่ original ของมันยังอยู่
+//executes the same code on every element in an array and returns a new array with the updated elements
+
+let storeUSD = [5,6,7,8];
+
+let storeEUR = storeUSD.map(value => value * 0.85);
+console.log(storeUSD); //[5,6,7,8] araay เดิมยังอยู่ ได้ array ใหม่ด้านล่าง
+console.log(storeEUR); //[ 4.25, 5.1, 5.95, 6.8 ]
+
