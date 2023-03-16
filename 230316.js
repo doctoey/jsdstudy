@@ -41,3 +41,10 @@ let storeEUR = storeUSD.map(value => value * 0.85);
 console.log(storeUSD); //[5,6,7,8] araay เดิมยังอยู่ ได้ array ใหม่ด้านล่าง
 console.log(storeEUR); //[ 4.25, 5.1, 5.95, 6.8 ]
 
+//เขียนเป็น function ดูง่ายกว่า
+let toEuros = (value) => {
+    value *= 0.85;
+    return value
+}
+toEuros(5)  
+console.log(toEuros(5)); //4.25
