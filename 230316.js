@@ -64,8 +64,20 @@ const filfruit = fruit.filter(element => element !== 'banana')
 console.log(filfruit); //[ 'apple', 'orange', 'pineapple' ]
 
 const randomNum = [375,200,3.14,7,13,852]
-
 const smallNum = randomNum.filter(num => {
     return num < 200;
 });
 console.log(smallNum); //[ 3.14, 7, 13 ] 
+
+//.findIndex()
+//หาตำแหน่ง
+
+const myNumber = [12,25,8,5,5];
+
+const lessNumber = myNumber.findIndex(num => {
+    return num < 10;
+})
+console.log(lessNumber);  //2 ตัว
+
+
+
