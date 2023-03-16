@@ -52,8 +52,9 @@ console.log(toEuros(5)); //4.25
 
 
 //.filter()
+//Create new array with condition
 
 const numberf = [1,-1,2,3];
 //filter only positive number
-const filtered = numberf.filter(n => n >= 0);
+const filtered = numberf.filter(n => n >= 0);  //ในวงเล็บคือ arrow function
 console.log(filtered) //[ 1, 2, 3 ] 
