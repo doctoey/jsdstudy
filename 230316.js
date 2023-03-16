@@ -62,3 +62,10 @@ console.log(filtered) //[ 1, 2, 3 ]
 const fruit = ['apple','banana','orange','pineapple']
 const filfruit = fruit.filter(element => element !== 'banana')
 console.log(filfruit); //[ 'apple', 'orange', 'pineapple' ]
+
+const randomNum = [375,200,3.14,7,13,852]
+
+const smallNum = randomNum.filter(num => {
+    return num < 200;
+});
+console.log(smallNum); //[ 3.14, 7, 13 ] 
