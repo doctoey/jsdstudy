@@ -130,13 +130,13 @@ let CAR5 = function (make, model, year){
     this.model = model;
     this.year = year;
     this.drive = function(name){
-        console.log(`${name} is driving car`); //Toey is driving car
+        return `${name} is driving car`;; 
     }
     console.log(this)
 }
 let MYCAR5 = new CAR5('Nissan', 'GTR', 2020);
 console.log(MYCAR5) //CAR { make: 'Nissan', model: 'GTR', year: 2020, drive: [λ] }
-console.log(MYCAR5.drive('Toey'))
+console.log(MYCAR5.drive('Toey')) //Toey is driving car
 
 
 
@@ -146,15 +146,15 @@ let Car9 = function (make, model, year){
     this.model = model;
     this.year = year;
     this.drive = function(name){
-        console.log(`${name} is driving car `); //Jack is driving car , Jill is driving car
+        return `${name} is driving car`; ; 
     };
     
 };
 
 let myCar9 = new Car9('Nisan', 'A123', 2003);
 console.log(myCar9);
-console.log(myCar9.drive('Jack'));
+console.log(myCar9.drive('Jack'));  //Jack is driving car 
 
 let myCar8 = new Car9('Honda', 'H435', 2010);
     console.log(myCar8);
-    console.log(myCar8.drive('Jill'));
+    console.log(myCar8.drive('Jill'));  //Jill is driving car
