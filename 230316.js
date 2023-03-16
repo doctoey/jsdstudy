@@ -49,3 +49,11 @@ let toEuros = (value) => {
 //let storeEUR = storeUSD.map(toEuros); เขียนแบบนี้ก็ได้ ดูง่ายกว่า value => value * 0.85
 toEuros(5)  
 console.log(toEuros(5)); //4.25
+
+
+//.filter()
+
+const numberf = [1,-1,2,3];
+//filter only positive number
+const filtered = numberf.filter(n => n >= 0);
+console.log(filtered) //[ 1, 2, 3 ] 
