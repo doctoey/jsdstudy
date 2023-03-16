@@ -91,3 +91,35 @@ const numberR = [1,2,3,4,5]
 
 const sumR = numberR.reduce((accumulator,currentValue) => accumulator + currentValue)
 console.log(sumR);  //15
+
+
+
+//function object
+//object literal
+
+let myCar = {
+    make: 'Benz',
+    model: 'E220',
+    year: 2000,
+    drive: function () {
+        console.log('Driving Car');
+    }
+};
+
+console.log(myCar) //{ make: 'Benz', model: 'E220', year: 2000, drive: [λ: drive] }
+console.log(myCar.make) //Benz
+console.log(myCar['model']) //E220
+myCar.year = 1997
+console.log(myCar.year) //1997
+console.log(myCar) //{ make: 'Benz', model: 'E220', year: 1997, drive: [λ: drive] }
+
+function myCar1(make, model){
+    return {
+        make,model,
+        drive(){
+            console.log(drive)
+        }
+    }
+}
+let car2 = new myCar1('BMW', 900)
+console.log(car2) //{ make: 'BMW', model: 900, drive: [Function: drive] }
