@@ -123,3 +123,38 @@ function myCar1(make, model){
 }
 let car2 = new myCar1('BMW', 900)
 console.log(car2) //{ make: 'BMW', model: 900, drive: [Function: drive] }
+
+
+let CAR5 = function (make, model, year){
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.drive = function(name){
+        console.log(`${name} is driving car`); //Toey is driving car
+    }
+    console.log(this)
+}
+let MYCAR5 = new CAR5('Nissan', 'GTR', 2020);
+console.log(MYCAR5) //CAR { make: 'Nissan', model: 'GTR', year: 2020, drive: [λ] }
+console.log(MYCAR5.drive('Toey'))
+
+
+
+//ของ k lak
+let Car9 = function (make, model, year){
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.drive = function(name){
+        console.log(`${name} is driving car `); //Jack is driving car , Jill is driving car
+    };
+    
+};
+
+let myCar9 = new Car9('Nisan', 'A123', 2003);
+console.log(myCar9);
+console.log(myCar9.drive('Jack'));
+
+let myCar8 = new Car9('Honda', 'H435', 2010);
+    console.log(myCar8);
+    console.log(myCar8.drive('Jill'));
