@@ -18,9 +18,10 @@ letter.forEach(item => {
     } else {
         count[item] = 1;
     }
+    //console.log(count)
 })
 console.log(count); //{ a: 3, b: 1, c: 2, d: 1 } //นับจำนวนตัวซ้ำ
-//แต่ถ้าเอา console.log(count) ไปไว้ในบรรทัด 20-21 มันจะค่อยๆไล่ให้ดู
+//แต่ถ้าเอา console.log(count) ไปไว้ในบรรทัด 21 มันจะค่อยๆไล่ให้ดู
 // { a: 1 }
 // { a: 1, b: 1 }
 // { a: 1, b: 1, c: 1 }
