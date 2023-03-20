@@ -62,7 +62,7 @@ const vanillaFlavor = new IceCreamMaking("vanilla", "gelato", [
   "caramel suace",
 ]);
 
-// console.log(vanillaFlavor.make());
+console.log(vanillaFlavor.make());
 
 // const mintChocChip = new IceCreamMaking("Mint Chocolate Chip", "ice cream", [
 //   "choclate sauce",
