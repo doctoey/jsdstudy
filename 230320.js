@@ -103,3 +103,28 @@ function showProps2(obj, objName) {
   return result;
 }
 // console.log(showProps2(vanillaFlavor, "vanillaFlavor"));
+
+
+
+
+
+
+
+
+//let x =''
+const myObj1 = {
+    name: "John",
+    age: 30,
+    cars: [
+      {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+      {name:"BMW", models:["320", "X3", "X5"]},
+      {name:"Fiat", models:["500", "Panda"]}
+    ]
+  }
+  
+  for (let i in myObj1.cars) {
+    x +=  `${myObj1.cars[i].name}` + '\n';
+    for (let j in myObj1.cars[i].models) {
+      x += '-' + myObj1.cars[i].models[j] + '\n';
+    }
+  }
