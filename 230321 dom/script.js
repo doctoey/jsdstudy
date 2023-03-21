@@ -94,7 +94,7 @@ addForm.querySelector('input[type="text"]').value = ''; // ''
 //ปุ้มลบ
 //const list = document.querySelector('#readings-list ul'); ช้างบนมี
 list.addEventListener('click', (e) =>{
-    if(e.target.classname === 'delete'){
+    if(e.target.className === 'delete'){
         const li = e.target.parentNode;
         list.removeChild(li);
     }
