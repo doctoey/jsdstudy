@@ -52,8 +52,6 @@ addForm.addEventListener('submit',function(e){
 // const li = document.createElement('li');
 // li.textContent = value;
 
-
-
 //});
 
 
@@ -84,10 +82,20 @@ addForm.querySelector('input[type="text"]').value = ''; // ''
 
 
 // ลองลบ ไม่รอด
-const deleteBtns = document.getElementsByClassName('delete');
-for (delBtn of deleteBtns){
-    delBtn.addEventListener('click', (e) =>{
-        let parentLi = delBtn.parentNode;
-        parentLi.parentNode.removeChild(parentLi);
-    });
-}
+// const deleteBtns = document.getElementsByClassName('delete');
+// for (delBtn of deleteBtns){
+//     delBtn.addEventListener('click', (e) =>{
+//         let parentLi = delBtn.parentNode;
+//         parentLi.parentNode.removeChild(parentLi);
+//     });
+// }
+
+
+//ปุ้มลบ
+//const list = document.querySelector('#readings-list ul'); ช้างบนมี
+list.addEventListener('click', (e) =>{
+    if(e.target.classname === 'delete'){
+        const li = e.target.parentNode;
+        list.removeChild(li);
+    }
+});
