@@ -1,36 +1,68 @@
+//With Null
+/*
 class Users {
     constructor(email, password, displayName, height, weight, gender, image) {
-      this.email = email;
-      this.password = password;
-      this.displayName = displayName;
-      this.height = height;
-      this.weight = weight;
-      this.gender = gender;
-      this.image = image;
+        this.email = email;
+        this.password = password;
+        this.displayName = displayName;
+        this.height = height;
+        this.weight = weight;
+        this.gender = gender;
+        this.image = image;
     }
-  
-    get showEmail() {
-      return this.email;
+    // ... other methods ...
+}
+class ChildUsers extends Users {
+    constructor(email, displayName, image) {
+        super(email, null, displayName, null, null, null, image);
     }
-  
-    get showDisplay() {
-      return this.displayName;
+    // You can add methods specific to ChildUsers here
+}
+// Example usage
+const childUser = new ChildUsers('email@example.com', 'John Doe', 'path/to/image.jpg');
+console.log(childUser.showEmail); // 'email@example.com'
+console.log(childUser.showDisplay); // 'John Doe'
+console.log(childUser.showImage); // 'path/to/image.jpg'
+*/
+
+
+//destructuring without Null
+class Users {
+    constructor({ email, password, displayName, height, weight, gender, image }) {
+        this.email = email;
+        this.password = password;
+        this.displayName = displayName;
+        this.height = height;
+        this.weight = weight;
+        this.gender = gender;
+        this.image = image;
     }
-  }
-  
-  class userLogin extends Users {
-    constructor(email, password, isLogin, image) {
-      super(email, password, null, null, null, null, image);
-      this.isLogin = isLogin;
+    // ... other methods ...
+}
+class ChildUsers extends Users {
+    constructor({ email, displayName, image }) {
+        super({ email, displayName, image });
     }
-  
-    get showImage() {
-      return this.image;
-    }
-  }
-  
-  const pramote = new userLogin("test@gmail.com", "123456789", 1, "path/to/image.jpg");
-  console.log(pramote.showImage); // Output: "path/to/image.jpg"
+    // You can add methods specific to ChildUsers here
+}
+// Example usage
+const childUser = new ChildUsers({ email: 'email@example.com', displayName: 'John Doe', image: 'path/to/image.jpg' });
+console.log(childUser.showEmail); // 'email@example.com'
+console.log(childUser.showDisplay); // 'John Doe'
+console.log(childUser.showImage); // 'path/to/image.jpg'
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
