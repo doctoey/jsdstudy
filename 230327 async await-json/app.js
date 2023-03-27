@@ -1,3 +1,23 @@
+let stocks =  {
+    coffee: [ "cappuccino", "latte" ,"mocha"],
+    liquid: ["hot","ice","milk"],
+    cup:["small","midium","large"],
+    topping:["chocolate", "milk"]         
+};
+
+let is_shop_open = true; //1. is the shop open
+
+
+function time(ms){
+    return new Promise((resolve,reject) =>{
+      if(is_shop_open){
+        setTimeout(resolve,ms);
+      }else{
+        reject(console.log("shop is closed"));
+      }
+    });
+}
+
 async function kitchen (){ //it's recommended to use a try/catch block to catch any errors that might occur during the asynchronous operations
     try {
     
