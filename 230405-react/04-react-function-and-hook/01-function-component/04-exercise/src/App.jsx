@@ -57,6 +57,15 @@ function Name() {
     <td>Manager</td>
   </tr>
     </table>
+
+    {/* ลองทำเอง */}
+    <div>
+   
+        {namePo.map(item => (
+          <p>{item.name}  {item.organ}  {item.position}</p>
+        ))}
+      
+    </div>
 </div>
     )
 }
