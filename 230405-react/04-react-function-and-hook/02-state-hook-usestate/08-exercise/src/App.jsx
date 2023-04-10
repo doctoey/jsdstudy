@@ -16,7 +16,6 @@ function Info() {
     const user = {
         firstName:"toey",
         lastName:"kung",
-        img:"https://pbs.twimg.com/media/FtTtmlmagAA-Xdy?format=jpg&name=large",
         haha:"araiwa"
       }
     const handleChangeName = (event) => {
