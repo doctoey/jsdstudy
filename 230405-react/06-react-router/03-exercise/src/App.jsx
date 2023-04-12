@@ -1,14 +1,18 @@
 import { useState } from 'react'
 import Layout from './Layout'
+import Login from './login';
+import Signup from './signup';
 
 const App = () => {
     
     return (
-        <Layout>
-            <div>
+    <div>
+        <Layout />
+            
                 Application
-            </div>
-        </Layout>
+            
+            
+  </div>
     )
 }
 
