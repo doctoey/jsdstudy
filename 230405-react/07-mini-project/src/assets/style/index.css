@@ -38,3 +38,61 @@ footer button {
   width: 50%;
   height: 36px;
 }
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #D9D9D9;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  height: 4rem;
+  border-bottom: 1px solid black;
+}
+
+.navbar ul {
+  display:flex;
+  list-style: none;
+  gap: 1rem;
+  /* flex-direction: column;
+  justify-content: space-between; */
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
+  
+}
+
+.navbar a {
+  text-decoration: none;
+  
+}
+
+.userh1 {
+  display: flex;
+}
+
+.login-ja{
+  display: flex;
+  background-color: #fff;
+  width: 1000px;
+  height: 639px;
+  flex-direction: column;
+  padding: 100px;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.login-btn {
+  padding: 10px 15px;
+  /* gap: 5px; */
+  background: #5E5BFF;
+  border: 1px solid #5E5BFF;
+  border-radius: 5px;
+} 
+
