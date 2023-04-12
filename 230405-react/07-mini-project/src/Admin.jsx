@@ -20,8 +20,31 @@ const Admin = () => {
     
     return (
         <div>
+        
             {/* this is example of mapping array of object to html. */}
-            {[{username: 'hello'}].map(item => <div>{item.username}</div>)}
+            {/* {[{username: 'users'}].map(item => <div>{item.username}</div>)} */}
+
+            <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Fullname</th>
+                    <th>Organization</th>
+                </tr>
+            </thead>
+            <tbody>
+                {users.map(user => (
+                    <tr key={user.id}>
+                        <td>{user.id}</td>
+                        <td>{user.username}</td>
+                        <td>{user.fullname}</td>
+                        <td>{user.organization}</td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+        
         </div>
     )
 }

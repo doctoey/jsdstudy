@@ -4,6 +4,8 @@ import { Context } from "./UserContext"
 import Admin from './Admin'
 import User from './User'
 
+
+
 const Home = () => {
     // You have to use getUserRole() to get role of current user
     // role is specify below
@@ -12,19 +14,29 @@ const Home = () => {
     // 'other' is who didn't login.
     const { getUserRole } = useContext(Context)
     // example of getUserRole.
-    // const _role = getUserRole()
     // return type is always string.
+    
     const [role, setRole] = useState()
+    // const [data, setData] = useState()
+    // let prevdata = data
+    
+    const IniApp = () => {
+        const _role = getUserRole()
+        setRole(_role);
+        // setRole(prevdata++);
+    }
+
+    useEffect(IniApp, [])
 
 
     // You have to add condition here according to role.
-    if (role === '?????') {
+    // if (role === 'admin') {
         return (
             <Layout>
                 <Admin />
             </Layout>
         )
-    }
+    // }
 
     return (
         <Layout>
