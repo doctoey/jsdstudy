@@ -67,6 +67,14 @@ class UsersControl {
         users.push({ id, username, password, fullname, organization })
         this.save(users)
     }
+
+    signup = ({ username, password, fullname, organization }) => {
+        const users = this.fetchData()
+        const id = users.length + 1
+        users.push({ id, username, password, fullname, organization })
+        this.save(users)
+        alert ('Sign Up success !!!')
+    }
 }
 
 export default UsersControl
