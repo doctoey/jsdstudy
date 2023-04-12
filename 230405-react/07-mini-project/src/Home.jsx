@@ -29,6 +29,52 @@ const Home = () => {
     useEffect(IniApp, [])
 
 
+
+    
+
+
+
+
+
+////////////////////////////////////////////////////////////
+
+//     const { getUserRole, getCurrent } = useContext(Context);
+//   // example of getUserRole.
+//   // const _role = getUserRole()
+//   // return type is always string.
+//   const [role, setRole] = useState();
+
+//   const InitApp = () => {
+//     console.log("initApp");
+//     setRole(getUserRole());
+//     console.log("getUserCurrent", getCurrent());
+//   };
+
+//  const { getUserRole, getCurrent } = useContext(Context);
+//   // example of getUserRole.
+//   // const _role = getUserRole()
+//   // return type is always string.
+//   const [role, setRole] = useState();
+
+//   const InitApp = () => {
+//     console.log("initApp");
+//     setRole(getUserRole());
+//     console.log("getUserCurrent", getCurrent());
+//   };
+
+//   useEffect(InitApp, [getCurrent]);
+
+
+////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
     // You have to add condition here according to role.
     // if (role === 'admin') {
         return (
