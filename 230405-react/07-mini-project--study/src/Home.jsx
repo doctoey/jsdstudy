@@ -12,9 +12,12 @@ const Home = () => {
     // admin role is 'admin'
     // user role is 'user'
     // 'other' is who didn't login.
-    const { getUserRole } = useContext(Context)
+    // const { getUserRole } = useContext(Context)
     // example of getUserRole.
     // return type is always string.
+    const { currentRole } = useContext(Context)
+    // example of currentRole.
+    // const _role = currentRole
     
     const [role, setRole] = useState()
     // const [data, setData] = useState()
@@ -77,11 +80,13 @@ const Home = () => {
 
     // You have to add condition here according to role.
     // if (role === 'admin') {
+        if (currentRole === 'admin') {
         return (
             <Layout>
                 <Admin />
             </Layout>
         )
+        }
     // }
 
     return (
