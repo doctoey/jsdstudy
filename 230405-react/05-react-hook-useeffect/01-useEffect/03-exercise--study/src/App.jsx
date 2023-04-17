@@ -9,8 +9,9 @@ const App = () => {
   };
 
   const handleExchangeChange = (event) => {
-    const newExchange = event.target.value;
-    setExchange(newExchange);
+    // const newExchange = event.target.value;
+    // setExchange(newExchange);
+    setExchange(event.target.value)
   };
 
   useEffect(syncRate, [])
