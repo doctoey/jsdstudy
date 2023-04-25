@@ -10,7 +10,7 @@ function render(request, response) {
     let ctype = {'Content-Type':'text/html'}
     
     //Module FS readFile index.html and respond 
-    fs.readFile('html/index.html', (error, content) => {
+    fs.readFile(__dirname + '/html/index.html', (error, content) => {
         if (!error) {
             response.writeHead(200, ctype)
             response.write(content)
