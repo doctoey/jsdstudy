@@ -6,6 +6,7 @@ const foodRouter = express.Router();
 const logger = (req, res, next) => {
   //logging
   console.log('Request parameters');
+  // console.log({ special: req.params.special , menu: req.params.menu});
   console.log(req.params);
   const now = new Date();
   console.log(now.toISOString());
@@ -15,9 +16,6 @@ const logger = (req, res, next) => {
 foodRouter.use(logger);
 
 foodRouter.get('/:menu', (req, res) => {
-  //logging
-  console.log('Request parameters');
-  console.log(req.params);
   // Cooking
   const { menu } = req.params;
   const chickenRice = {
@@ -27,8 +25,8 @@ foodRouter.get('/:menu', (req, res) => {
     chickenRice.meat = 'fried-chicken';
     chickenRice.sauces = ['mae pra nom'];
     // Serve
-    res.status(200).send(chickenRice);
-    // res.status(200).json(chickenRice);
+    // res.status(200).send(chickenRice);
+    res.status(200).json(chickenRice);
   } else if (menu === 'chicken-rice') { //http://localhost:8080/foods/chicken-rice
     chickenRice.meat = 'boiled-chicken';
     chickenRice.sauces = ['white', 'red'];
@@ -42,9 +40,6 @@ foodRouter.get('/:menu', (req, res) => {
 });
 //http://localhost:8080/foods/menunew/roastedPorkRice
 foodRouter.get('/menunew/:special', (req, res) => {
-  //logging
-  console.log('Request parameters');
-  console.log(req.params);
   // Cooking
   const { menu } = req.params;
   const roastedPorkRice = {
