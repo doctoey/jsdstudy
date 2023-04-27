@@ -23,13 +23,13 @@ foodRouter.get('/:menu', (req, res) => {
   const chickenRice = {
     rice: 'oiled rice',
   };
-  if (menu === 'fried-chicken-rice') {
+  if (menu === 'fried-chicken-rice') { //http://localhost:8080/foods/fried-chicken-rice
     chickenRice.meat = 'fried-chicken';
     chickenRice.sauces = ['mae pra nom'];
     // Serve
     res.status(200).send(chickenRice);
-    res.status(200).json(chickenRice);
-  } else if (menu === 'chicken-rice') {
+    // res.status(200).json(chickenRice);
+  } else if (menu === 'chicken-rice') { //http://localhost:8080/foods/chicken-rice
     chickenRice.meat = 'boiled-chicken';
     chickenRice.sauces = ['white', 'red'];
     // Serve
@@ -40,9 +40,9 @@ foodRouter.get('/:menu', (req, res) => {
     res.status(400).send(`We are not serving ${menu}`);
   }
 });
-
-foodRouter.get('/:special-menu', (req, res) => {
-  //logging 
+//http://localhost:8080/foods/menunew/roastedPorkRice
+foodRouter.get('/menunew/:special', (req, res) => {
+  //logging
   console.log('Request parameters');
   console.log(req.params);
   // Cooking
@@ -53,9 +53,9 @@ foodRouter.get('/:special-menu', (req, res) => {
   roastedPorkRice.meat = 'roasted-pork';
   roastedPorkRice.sauces = ['moo-dang-sauce'];
   // Serve
-  res.status(200).json(chickenRice);
+  res.status(200).json(roastedPorkRice);
 });
-
+//http://localhost:8080/foods/pre-orders/
 foodRouter.use('/pre-orders', preOrderRouter);
 
 module.exports = { foodRouter };

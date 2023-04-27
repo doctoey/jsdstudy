@@ -1,7 +1,7 @@
 const express = require('express');
 var cors = require('cors');
-// const { foodRouter } = require('./routers/food');
-// const { drinkRouter } = require('./routers/drinks');
+const { foodRouter } = require('./src/routers/food');
+const { drinkRouter } = require('./src/routers/drinks');
 const bodyParser = require('body-parser');
 // const express = require('express');
 
@@ -23,11 +23,11 @@ app.post('/activities', (req, res) => {
 
 // สั่งข้าว
 // POST /foods/pre-orders
-// app.use('/foods', foodRouter);
+app.use('/foods', foodRouter);
 
 // สั่งน่ำ
 // POST /drinks/pre-orders
-// app.use('/drinks', drinkRouter);
+app.use('/drinks', drinkRouter);
 
 app.listen(8080, () => {
   console.log('Server is listening on 8080');
