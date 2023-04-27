@@ -13,7 +13,7 @@ const logger = (req, res, next) => {
   next();
 };
 
-foodRouter.use(logger);
+foodRouter.use('/:menu', logger);
 
 foodRouter.get('/:menu', (req, res) => {
   // Cooking
