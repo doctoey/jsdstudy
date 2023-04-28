@@ -13,9 +13,9 @@ const logger = (req, res, next) => {
   next();
 };
 
-foodRouter.use('/:menu', logger);
+// foodRouter.use('/:menu', logger);
 
-foodRouter.get('/:menu', (req, res) => {
+foodRouter.get('/:menu', logger, (req, res) => { //จะแบบข้างบน หรือแบบนี้ก็ได้
   // Cooking
   const { menu } = req.params;
   const chickenRice = {
@@ -39,7 +39,7 @@ foodRouter.get('/:menu', (req, res) => {
   }
 });
 //http://localhost:8080/foods/menunew/roastedPorkRice
-foodRouter.get('/menunew/:special', (req, res) => {
+foodRouter.get('/menunew/:special', logger, (req, res) => {
   // Cooking
   const { menu } = req.params;
   const roastedPorkRice = {
