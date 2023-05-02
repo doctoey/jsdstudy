@@ -19,6 +19,18 @@ webServer.get("/users", (request, response) => {
 });
 
 webServer.post("/users", (request, response) => {
+  const name = request.body.name; //รับค่าจาก body
+  const age = request.body.age;
+  if( request.body.age === undefined) {
+    response.send("error: age is missing!")
+  }
+  const userId = `mock-id-${users.length + 1}`;
+  const newUser = { name:name, age:age };
+  users.push(newUser)
+  response.json("Create User Success");
+});
+
+webServer.post("/users", (request, response) => {
   const name = request.body.name;
   const age = request.body.age;
   const userId = `mock-id-${users.length}`;
