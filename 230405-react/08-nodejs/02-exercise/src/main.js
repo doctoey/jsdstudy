@@ -5,7 +5,8 @@ const ipAddress = "127.0.0.1";
 
 // code down below
 webServer.get('/', (req, res) => {
-    res.json("This is Root Route")
+    // res.json("<h1>This is Root Route</h1>")
+    res.send("<h1>This is Root Route</h1>")
 })
 
 webServer.get('/news', (req, res) => {
