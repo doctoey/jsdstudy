@@ -6,7 +6,14 @@ const ipAddress = "127.0.0.1";
 const port = 3001;
 
 // code here.
-const company = [];
+const company = [
+  { 
+    companyId: "comp-01", 
+    name: "Mock Company 01",
+    taxId: "tax-000",
+    employees: []
+ }
+];
 
 webServer.get("/", (req, res) => {
   res.send("hello world");
