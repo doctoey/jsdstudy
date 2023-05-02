@@ -10,13 +10,22 @@ function BasicApp() {
     // 1) create HttpRequest by axios
     // axios.get(hostname+route)
     // 2) use async await in axios
+    const response = await axios.get("http://localhost:3001/company")
     // 3) set Response to companies by useState (setCompanies)
+    const body = response.data;
+    setCompanies(body)
   };
 
   const createCompany = async () => {
+    const createCompany = await axios.post("http://localhost:3001/company", {
+      name:name,
+      taxId:taxId,
+    });
+    alert(createCompany.data)
+    getCompanies();
     // 0) get name, taxId
     // 1) create HttpRequest by axios
-    // axios.get(hostname+route, body)
+    // axios.post(hostname+route, body)
     // body should be dynamic by state
     // 2) use async await in axios
     // 3) alert `Successful create user`
@@ -25,8 +34,8 @@ function BasicApp() {
   return (
     <div>
       <h1>Basic Application</h1>
-      <button onClick={getUser}>Get Company</button>
-      <button onClick={createUser}>Create Company</button>
+      <button onClick={getCompanies}>Get Company</button>
+      <button onClick={createCompany}>Create Company</button>
       <input
         type="text"
         placeholder="name"
