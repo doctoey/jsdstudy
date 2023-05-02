@@ -17,11 +17,12 @@ webServer.get('/news', (req, res) => {
 })
 
 webServer.get('/users', (req, res) => {
-    res.json([
+    const mockid = [
         { userId: "mock-id-1" },
         { name: "mock-id-2" },
         { name: "mock-id-3" },
-      ])
+      ];
+    res.json(mockid)
 })
 
 webServer.get('/me', (req, res) => {
@@ -34,6 +35,7 @@ webServer.get('/me', (req, res) => {
 
 webServer.get('/health-check', (req, res) => {
     res.json("Server is fine!")
+    // res.send("Server is fine!")
 })
 
 webServer.listen(port, ipAddress, () => { //webServer.listenต้องอยู่ล่างสุดเสมอ
