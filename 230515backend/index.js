@@ -46,7 +46,7 @@ app.use('/authen', AuthenRouter)
 
 const start = async () => {
     await mongoose.connect(
-        'mongodb+srv://testtoeyja:toeyjatest@cluster0.mfjuwoz.mongodb.net/?retryWrites=true&w=majorityy'
+        'mongodb+srv://testtoeyja:toeyjatest@cluster0.mfjuwoz.mongodb.net/'
     ).then(() => {
         console.log('Connected to database')
     }).catch((err) => {
