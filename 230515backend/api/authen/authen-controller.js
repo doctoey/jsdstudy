@@ -12,7 +12,7 @@ class AuthenController {
     const foundUser = await userModel.find({ email });
     //ถ้าเจอ เมล์ ที่ซ้ำกัน ใน databaseแปลว่ามีแล้ว
     if (foundUser.length > 0) {
-      res.status(400).json("Email already exists");
+      return res.status(400).json("Email already exists");
     } else {
       //ถ้าไม่ซ้ำ(ไม่มีเมล์อยู่ก่อนหน้า)
       const newUser = new userModel({
