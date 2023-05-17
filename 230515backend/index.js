@@ -4,12 +4,49 @@ const app = express();
 // import mongoose มาใช้
 const mongoose = require('mongoose');
 
+//import router
+const AuthenRouter = require('./api/authen/authen-router');
+
 //body-parser
 app.use(express.json());
+app.use('/authen', AuthenRouter)
+// app.use('/activity', ActivityRouter)
+
+// app.get('/activity/:id', (req, res) => {
+
+// })
+
+// app.get('/activity/', (req, res) => {
+
+// })
+
+// app.post('/activity/', (req, res) => {
+
+// })
+
+// app.put('/activity/', (req, res) => {
+
+// })
+
+// app.delete('/activity/', (req, res) => {
+
+// })
+
+// app.post('/login', (req, res) => {
+
+// })
+
+// app.post('/login', (req, res) => {
+
+// })
+
+// app.post('/register', (req, res) => {
+
+// })
 
 const start = async () => {
     await mongoose.connect(
-        'mongodb+srv://doctoey:c6cjxWTA89VkIdqF@cluster0.gco2nuf.mongodb.net/?retryWrites=true&w=majority'
+        'mongodb+srv://testtoeyja:toeyjatest@cluster0.mfjuwoz.mongodb.net/?retryWrites=true&w=majorityy'
     ).then(() => {
         console.log('Connected to database')
     }).catch((err) => {
