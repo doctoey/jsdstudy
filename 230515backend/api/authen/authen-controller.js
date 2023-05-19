@@ -47,25 +47,32 @@ class AuthenController {
       // const email = req.body.email;
       // const password = req.body.email;
 
-      const user = await userModel.findOne({ email: email })
-      const Password = await userModel.findOne({ password: password })
+      const user = await userModel.findOne({ email: email });
+      const Password = await userModel.findOne({ password: password });
 
+      //ถ้า email ไม่มีใน database
       if (!user) {
         return res.status(400).json("Email does not exist");
+        // ถ้า มี emali ใน database ก็ไปเช็ค password
+      } else {
+        // if (!Password) {
+        //   return res.status(400).json("Password does not match");
+        // }
+        //เช็คว่า password ตรงกันมั้ย(ถูกมั้ย)
+        const isPasswordmatch = bcrypt.compareSync(password, user.password);
+        if (isPasswordmatch) {
+          return res.status(200).json("Login success");
+          //ถ้า password ไม่ตรงกัน(ไม่ถูก)
+        } else {
+          return res.status(400).json("Password does not match");
+        }
       }
-
-      if (!Password) {
-        return res.status(400).json("Password does not match");
-      }
-
-      res.status(200).json({ user });
-
+      // res.status(200).json({ user });
     } catch (error) {
-          console.error(error);
-          res.status(500).json("Internal error");
+      console.error(error);
+      res.status(500).json("Internal error");
     }
   }
-
 }
 
 module.exports = new AuthenController();
