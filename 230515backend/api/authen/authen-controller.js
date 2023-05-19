@@ -40,6 +40,32 @@ class AuthenController {
       res.status(500).json("Internal error");
     }
   }
+
+  async login(req, res) {
+    try {
+      const { email, password } = req.body;
+      // const email = req.body.email;
+      // const password = req.body.email;
+
+      const user = await userModel.findOne({ email: email })
+      const Password = await userModel.findOne({ password: password })
+
+      if (!user) {
+        return res.status(400).json("Email does not exist");
+      }
+
+      if (!Password) {
+        return res.status(400).json("Password does not match");
+      }
+
+      res.status(200).json({ user });
+
+    } catch (error) {
+          console.error(error);
+          res.status(500).json("Internal error");
+    }
+  }
+
 }
 
 module.exports = new AuthenController();

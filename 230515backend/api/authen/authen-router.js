@@ -7,10 +7,11 @@ router.get('/register', (req, res) => {
     res.send('Hello')
 })
 
-router.post('/login', (req, res) => {
-    console.log(req.body)
-    res.json('helloooo login')
-})
+// router.post('/login', (req, res) => {
+//     console.log(req.body)
+//     res.json('helloooo login')
+// })
+router.post('/login', AuthenController.login)
 
 // router.post('/register', (req, res) => {
 //     console.log(req.body)
