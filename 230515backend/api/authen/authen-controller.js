@@ -1,5 +1,6 @@
 const userModel = require("./user-model");
 const bcrypt = require("bcrypt"); //เข้ารหัส password
+const jwt = require("jsonwebtoken"); //สร้าง token
 // import bcrypt from "bcrypt";
 
 class AuthenController {
@@ -48,7 +49,7 @@ class AuthenController {
       // const password = req.body.email;
 
       const user = await userModel.findOne({ email: email });
-      const Password = await userModel.findOne({ password: password });
+      // const Password = await userModel.findOne({ password: password });
 
       //ถ้า email ไม่มีใน database
       if (!user) {
@@ -61,7 +62,10 @@ class AuthenController {
         //เช็คว่า password ตรงกันมั้ย(ถูกมั้ย)
         const isPasswordmatch = bcrypt.compareSync(password, user.password);
         if (isPasswordmatch) {
-          return res.status(200).json("Login success");
+          const secret = "cat";
+          //สร้าง token
+          const token = jwt.sign({ _id: user._id, email: user.email }, secret); //jwt.sign() คือคำสั่งให้ช่วยสร้าง token , secret คือ กุญแจ
+          return res.status(200).json({ token });
           //ถ้า password ไม่ตรงกัน(ไม่ถูก)
         } else {
           return res.status(400).json("Password does not match");
