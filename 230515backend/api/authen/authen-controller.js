@@ -77,6 +77,28 @@ class AuthenController {
       res.status(500).json("Internal error");
     }
   }
+
+  async validateToken(req, res) {
+    // const {token} = req.cookies;
+    try {
+      //รับ token มาจาก header
+      const token = req.header("Authorization")?.replace("Bearer ", "");
+
+      //ถ้าไม่มี token ให้ส่ง res กลับไปว่า Access denied
+      if (!token) {
+        return res.status(401).json("Access denied");
+      } else {
+        //ถ้ามี token ให้ทำการ decode
+        const secret = "cat";
+        const decoded = jwt.verify(token, secret);
+      }
+
+      console.log(token);
+    } catch (error) {
+      console.error(error);
+      res.status(400).json("Access denied");
+    }
+  }
 }
 
 module.exports = new AuthenController();

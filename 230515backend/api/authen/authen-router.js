@@ -12,6 +12,7 @@ router.get('/register', (req, res) => {
 //     res.json('helloooo login')
 // })
 router.post('/login', AuthenController.login)
+router.post('/token', AuthenController.validateToken)
 
 // router.post('/register', (req, res) => {
 //     console.log(req.body)
