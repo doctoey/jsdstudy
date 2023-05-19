@@ -3,13 +3,18 @@ const express = require('express');
 const app = express();
 // import mongoose มาใช้
 const mongoose = require('mongoose');
+const decodeMiddleware = require('./middleware/decode');
 
 //import router
 const AuthenRouter = require('./api/authen/authen-router');
+const activityRouter = require('./api/activity/activity-router');
 
 //body-parser
 app.use(express.json());
 app.use('/authen', AuthenRouter)
+app.use(decodeMiddleware)
+app.use('/activity', activityRouter)
+
 // app.use('/activity', ActivityRouter)
 
 // app.get('/activity/:id', (req, res) => {
